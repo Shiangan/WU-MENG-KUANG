@@ -35,7 +35,7 @@ header .logo {
 
 header h1 {
     font-family: 'ChenYu', Arial; /* 使用辰魚落雁體 */
-    font-size: 38px; /* 根据需要调整字体大小 */
+    font-size: 40px; /* 根据需要调整字体大小 */
     color: #333; /* 字体颜色 */
     margin: 0; /* 清除默认的 margin */
 }
@@ -72,8 +72,8 @@ header h1 {
 }
 
 .paper-obituary-section h2 {
-    font-size: 24px; /* 标题字体大小 */
-    margin-bottom: 20px; /* 标题底部边距 */
+    font-size: 26px; /* 标题字体大小 */
+    margin-bottom: 22px; /* 标题底部边距 */
     color: #333; /* 标题颜色 */
 }
 
@@ -86,12 +86,12 @@ header h1 {
 /* 追思緬懷部分样式 */
 #remembrance {
     text-align: center; /* 内容居中对齐 */
-    margin: 24px auto; /* 上下边距和水平居中 */
+    margin: 26px auto; /* 上下边距和水平居中 */
     padding: 20px; /* 内边距 */
 }
 
 #remembrance h2 {
-    font-size: 24px; /* 增大标题字体 */
+    font-size: 26px; /* 增大标题字体 */
     margin-bottom: 20px; /* 标题底部边距 */
     color: #333; /* 标题颜色 */
     font-weight: bold; /* 标题加粗 */
@@ -180,7 +180,7 @@ header h1 {
     font-family: 'ChenYu', Arial;
     display: inline-block;
     padding: 10px 20px;
-    font-size: 26px; /* 按钮字体大小 */
+    font-size: 24px; /* 按钮字体大小 */
     color: #fff; /* 按钮文字颜色 */
     background-color: #0066cc; /* 按钮背景颜色 */
     text-decoration: none; /* 去掉下划线 */
@@ -256,7 +256,6 @@ header h1 {
     height: 30px;
 }
 
-/* 页脚样式 */
 /* 页脚样式 */
 footer {
     text-align: center;
