@@ -291,49 +291,49 @@ document.addEventListener("DOMContentLoaded", () => {
 <div id="flower-basket-gallery" style="display: none;">
     <div class="flower-basket-item">
         <a href="image/花籃A.JPG" data-lightbox="flower-baskets" data-title="A款NT$2,500/1對">
-            <img src="image/花籃A.JPG" alt="花籃A" loading="lazy">
+            <img src="image/花籃A.JPG" alt="花籃A" width="300" height="300" loading="lazy">
         </a>
         <p class="price"><strong>A款NT$2,500/對</strong></p>
     </div>
     <div class="flower-basket-item">
             <a href="image/花籃B.JPG" data-lightbox="flower-baskets" data-title="B款NT$3,000/1對">
-                <img src="image/花籃B.JPG" alt="花籃B" loading="lazy">
+                <img src="image/花籃B.JPG" alt="花籃B" width="300" height="300" loading="lazy">
             </a>
             <p class="price"><strong>B款NT$3,000/對</strong></p>
         </div>
         <div class="flower-basket-item">
             <a href="image/花籃C.JPG" data-lightbox="flower-baskets" data-title="C款NT$3,000/1對 ">
-                <img src="image/花籃C.JPG" alt="花籃C" loading="lazy">
+                <img src="image/花籃C.JPG" alt="花籃C" width="300" height="300" loading="lazy">
             </a>
             <p class="price"><strong>C款NT$3,500/對</strong></p>
         </div>
         <div class="flower-basket-item">
             <a href="image/花籃D.JPG" data-lightbox="flower-baskets" data-title="D款NT$3,000/1對" >
-                <img src="image/花籃D.JPG" alt="花籃D" loading="lazy">
+                <img src="image/花籃D.JPG" alt="花籃D" width="300" height="300" loading="lazy">
             </a>
             <p class="price"><strong>D款NT$4,000/對</strong></p>
         </div>
         <div class="flower-basket-item">
             <a href="image/花籃E.JPG" data-lightbox="flower-baskets" data-title="E款NT$3,000/1對">
-                <img src="image/花籃E.JPG" alt="花籃E" loading="lazy">
+                <img src="image/花籃E.JPG" alt="花籃E" width="300" height="300" loading="lazy">
             </a>
             <p class="price"><strong>E款NT$5,000/對</strong></p>
         </div>
         <div class="flower-basket-item">
             <a href="image/花籃F.JPG" data-lightbox="flower-baskets" data-title="F款NT$3,000/1對">
-                <img src="image/花籃F.JPG" alt="花籃F" loading="lazy">
+                <img src="image/花籃F.JPG" alt="花籃F" width="300" height="300" loading="lazy">
             </a>
             <p class="price"><strong>F款NT$5,500/對</strong></p>
         </div>
         <div class="flower-basket-item">
             <a href="image/花籃G.JPG" data-lightbox="flower-baskets" data-title="G款NT$3,000/1對">
-                <img src="image/花籃G.JPG" alt="花籃G" loading="lazy">
+                <img src="image/花籃G.JPG" alt="花籃G" width="300" height="300" loading="lazy">
             </a>
             <p class="price"><strong>G款NT$6,000/對</strong></p>
         </div>
         <div class="flower-basket-item">
             <a href="image/花籃H.JPG" data-lightbox="flower-baskets" data-title="H款NT$3,000/1對">
-                <img src="image/花籃H.JPG" alt="花籃H" loading="lazy">
+                <img src="image/花籃H.JPG" alt="花籃H" width="300" height="300" loading="lazy">
             </a>
             <p class="price"><strong>H款NT$6,500/對</strong></p>
         </div>
@@ -354,79 +354,88 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 </script>
 
-<style>
-    /* 致贈花籃部分样式 */
-    #donate-flower {
-        text-align: center;
-        margin: 20px auto;
-        max-width: 500px;
-        padding: 20px;
-        border: 2px solid #0066cc; /* 深蓝色边框 */
-        border-radius: 10px; /* 圆角 */
-        background-color: #f0f8ff; /* 淡蓝色背景 */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影 */
-    }
+        <style>
+/* 致贈花籃部分样式 */
+#donate-flower {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 20px;
+    border: 3px solid #005bb5; /* 更深藍色邊框 */
+    border-radius: 12px; /* 更柔和的圓角 */
+    background-color: #e6f2ff; /* 稍深的藍色背景 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 增強陰影效果 */
+}
 
-    #donate-flower h3 {
-        font-size: 28px;
-        color: #333;
-        margin-bottom: 15px;
-    }
-
-    #donate-flower p {
-        font-size: 20px;
-        color: #555;
-        margin-bottom: 20px;
-    }
-
-    /* 顯示花籃樣式按钮样式 */
-    .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 18px;
-        color: #fff;
-        background-color: #0066cc; /* 蓝色背景 */
-        text-decoration: none;
-        border-radius: 5px;
-    }
-
-    .btn:hover {
-        background-color: #004d99; /* 鼠标悬停时的颜色变化 */
-    }
-
-    /* 花籃画廊样式 */
-    #flower-basket-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .flower-basket-item {
-        max-width: 200px; /* 控制花籃圖片最大寬度 */
-        text-align: center;
-    }
-
-    .flower-basket-item img {
-        width: 100%;
-        height: auto; /* 保持圖片比例 */
-        border: 2px solid #ccc; /* 圖片边框 */
-        border-radius: 5px; /* 圖片圓角 */
-    }
-
-    .price {
-        margin-top: 10px;
-        font-size: 18px;
-        color: #333;
-    }
-
-    img {
-    max-width: 100%;
-    height: auto;
+#donate-flower h3 {
+    font-size: 26px;
+    color: #00274d; /* 深藍色文字 */
     margin-bottom: 10px;
 }
-</style>
+
+#donate-flower p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* 按鈕樣式 */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #0077e6; /* 更亮的藍色 */
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 按鈕陰影 */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #005bb5;
+    transform: translateY(-3px); /* 懸停時輕微上移 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 懸停時增強陰影 */
+}
+
+/* 花籃畫廊 */
+#flower-basket-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.flower-basket-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.flower-basket-item:hover {
+    transform: scale(1.05); /* 懸停時輕微放大 */
+}
+
+.flower-basket-item img {
+    width: 100%;
+    border: 2px solid #ccc; /* 圖片邊框 */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 圖片陰影 */
+    transition: all 0.3s ease;
+}
+
+.flower-basket-item img:hover {
+    border-color: #0077e6; /* 懸停時邊框變為藍色 */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* 懸停時增強陰影 */
+}
+
+.price {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #444;
+}
+    </style>
 
 <!-- 固定聯絡方式 -->
         <div id="fixed-links">
