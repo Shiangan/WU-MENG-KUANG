@@ -234,14 +234,14 @@ document.addEventListener('DOMContentLoaded', function () {
 /* 淡入效果 */
 .fade-in-text {
     opacity: 0;
-    animation: fadeIn 2s forwards;
-    animation-delay: var(--delay, 0s);
+    transform: translateY(20px); /* 初始稍微向下移動 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+/* 滑動進入可視區域後的效果 */
+.fade-in-text.visible {
+    opacity: 1;
+    transform: translateY(0); /* 回到原位 */
 }
 
 /* 響應式設計 */
@@ -254,6 +254,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }
 </style>
+
+        <script>
+            // Intersection Observer 實現淡入效果
+document.addEventListener("DOMContentLoaded", () => {
+    const fadeInElements = document.querySelectorAll('.fade-in-text');
+
+    // 設置 Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // 加入 visible 類名觸發動畫
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    // 觀察所有文字元素
+    fadeInElements.forEach((el) => observer.observe(el));
+});
+        </script>
 
 <!-- 致贈花籃部分 -->
 <section id="donate-flower">
