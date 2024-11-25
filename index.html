@@ -206,23 +206,36 @@ document.addEventListener('DOMContentLoaded', function () {
 </section>
 
         <!-- 感謝信息部分 -->
-        <div class="remembrance-thanks">
-            <p class="fade-in-text"><strong>感謝親友們在這段時間的慰問與關心</strong></p>
-            <p class="fade-in-text"><strong>您的關懷和鼓勵</strong></p>
-            <p class="fade-in-text"><strong>陪伴我們度過了這段艱難的時光</strong></p>
-            <p class="fade-in-text"><strong>敬邀您</strong></p>
-            <p class="fade-in-text"><strong>與我們一同追思懷念 吳萌光先生 </strong></p>
-            <p class="fade-in-text"><strong>並向您獻上最深的敬意</strong></p>
-            <p class="fade-in-text"><strong>謝謝您！</strong></p>
-        </div>
+<section class="remembrance-thanks">
+    <article>
+        <p class="fade-in-text" style="--delay: 0s;"><strong>感謝親友們在這段時間的慰問與關心</strong></p>
+        <p class="fade-in-text" style="--delay: 0.5s;"><strong>您的關懷和鼓勵</strong></p>
+        <p class="fade-in-text" style="--delay: 1s;"><strong>陪伴我們度過了這段艱難的時光</strong></p>
+        <p class="fade-in-text" style="--delay: 1.5s;"><strong>敬邀您</strong></p>
+        <p class="fade-in-text" style="--delay: 2s;"><strong>與我們一同追思懷念 吳萌光先生</strong></p>
+        <p class="fade-in-text" style="--delay: 2.5s;"><strong>並向您獻上最深的敬意</strong></p>
+        <p class="fade-in-text" style="--delay: 3s;"><strong>謝謝您！</strong></p>
+    </article>
+</section>
 
-        
+<style>
+/* 基本樣式 */
+.remembrance-thanks {
+    padding: 20px;
+    text-align: center;
+    line-height: 1.8;
+}
 
-         <style>
-             /* 淡入效果 */
+.remembrance-thanks p {
+    margin: 10px 0;
+    font-size: clamp(16px, 2.5vw, 24px); /* 自適應字體大小 */
+}
+
+/* 淡入效果 */
 .fade-in-text {
     opacity: 0;
     animation: fadeIn 2s forwards;
+    animation-delay: var(--delay, 0s);
 }
 
 @keyframes fadeIn {
@@ -230,28 +243,17 @@ document.addEventListener('DOMContentLoaded', function () {
         opacity: 1;
     }
 }
-         
-         /* 响应式设计 */
+
+/* 響應式設計 */
 @media (max-width: 500px) {
-    #remembrance-thanks {
-        font-size: 20px; /* 小屏幕上字体略小 */
-        padding: 10px; /* 减少内边距 */
+    .remembrance-thanks {
+        padding: 10px;
+    }
+    .remembrance-thanks p {
+        font-size: clamp(14px, 4vw, 20px);
     }
 }
-
-@media (max-width: 400px) {
-    #remembrance-thanks {
-        font-size: 14px; /* 更小屏幕上的字体大小 */
-        padding: 5px; /* 更小的内边距 */
-    }
-}
-
-             img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-         </style>
+</style>
 
 <!-- 致贈花籃部分 -->
 <section id="donate-flower">
