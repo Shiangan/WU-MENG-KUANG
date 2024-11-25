@@ -162,8 +162,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <!-- 訃告紙本部分 -->
         <section class="paper-obituary-section">
          <h2><strong>訃告正本</strong></h2>
-            <a href="image/IMG_8159.jpeg" data-lightbox="paper-obituary" data-title="訃聞紙本">
-                <img id="paper-obituary" src="image/IMG_8159.jpeg" alt="訃聞紙本" loading="lazy">
+            <a href="image/IMG_8160.jpeg" data-lightbox="paper-obituary" data-title="訃聞紙本">
+                <img id="paper-obituary" src="image/IMG_8160.jpeg" alt="訃聞紙本" loading="lazy">
             </a>
         </section>
 
@@ -245,6 +245,13 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 
 /* 滑動進入可視區域後的效果 */
+
+.fade-in-slide {
+    opacity: 0;
+    transform: translateY(20px); /* 初始位置稍微下移 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
 .fade-in-text.visible {
     opacity: 1;
     transform: translateY(0); /* 回到原位 */
@@ -253,10 +260,10 @@ document.addEventListener('DOMContentLoaded', function () {
 /* 響應式設計 */
 @media (max-width: 500px) {
     .remembrance-thanks {
-        padding: 10px;
+        padding: 20px;
     }
     .remembrance-thanks p {
-        font-size: clamp(14px, 4vw, 20px);
+        font-size: clamp(16px, 4vw, 20px);
     }
 }
 </style>
@@ -264,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <script>
             // Intersection Observer 實現淡入效果
 document.addEventListener("DOMContentLoaded", () => {
-    const fadeInElements = document.querySelectorAll('.fade-in-text');
+    const fadeInElements = document.querySelectorAll('.fade-in-slide');
 
     // 設置 Intersection Observer
     const observer = new IntersectionObserver((entries) => {
