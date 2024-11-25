@@ -521,31 +521,64 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <style>
-#share-buttons {
+/* 名片样式 */
+#business-card {
     text-align: center;
     margin: 20px auto;
+}
+
+.business-card-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* 圓角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+}
+
+/* 分享按鈕樣式 */
+#share-buttons {
+    text-align: center;
+    margin: 10px auto;
 }
 
 .share-btns {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .share-btn {
     display: inline-block;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.fb-share-btn img, .line-share-btn img {
-    width: 40px; /* 设定适当的图标大小 */
+.share-btn img {
+    width: 100%;
     height: auto;
+    border-radius: 50%; /* 圓形圖標 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 圖標陰影 */
 }
 
-.fb-share-btn:hover img, .line-share-btn:hover img {
-    opacity: 0.8; /* 鼠标悬停效果 */
+.share-btn:hover {
+    transform: scale(1.1); /* 懸停時放大 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 增強陰影 */
+}
+
+/* 響應式設計 */
+@media (max-width: 500px) {
+    .share-btns {
+        flex-wrap: wrap; /* 小螢幕按鈕換行 */
+    }
+
+    .share-btn {
+        width: 40px; /* 小螢幕縮小按鈕尺寸 */
+        height: 40px;
+    }
 }
 </style>
-        
+                
 
      <div style="padding: 20px; background-color: #f9f9f9; border-radius: 10px; margin-top: 20px;">
     <h2 style="font-family: '辰魚落雁體'; color: #333; text-align: center;">台北市懷愛館（第二殯儀館）</h2>
