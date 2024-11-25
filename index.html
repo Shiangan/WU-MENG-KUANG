@@ -130,24 +130,30 @@ document.addEventListener('DOMContentLoaded', function () {
 #life-story {
     text-align: center;
     font-size: 18px; /* 可以根据需要调整字体大小 */
-    line-height: 1.6; /* 行间距 */
+    line-height: 1.8; /* 行间距 */
     margin: 0 auto;
     max-width: 800px; /* 控制内容的最大宽度 */
     padding: 20px; /* 适当增加内边距 */
+    font-family: 'Noto Serif', 'MingLiU', serif; /* 使用優雅的字體 */
+    color: #333; /* 調整文字顏色 */
+    background-color: #f9f9f9; /* 背景顏色讓文字更加突出 */
+    border-radius: 10px; /* 圓角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 加上陰影效果 */
+    letter-spacing: 0.5px; /* 輕微增加字間距，讓文字更通透 */
 }
 
 /* 响应式设计 */
 @media (max-width: 600px) {
     #life-story {
         font-size: 16px; /* 小屏幕上字体略小 */
-        padding: 10px; /* 减少内边距 */
+        padding: 15px; /* 减少内边距 */
     }
 }
 
 @media (max-width: 400px) {
     #life-story {
         font-size: 14px; /* 更小屏幕上的字体大小 */
-        padding: 5px; /* 更小的内边距 */
+        padding: 10px; /* 更小的内边距 */
     }
 }
 
