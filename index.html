@@ -580,38 +580,88 @@ document.addEventListener("DOMContentLoaded", () => {
 </style>
                 
 
-     <div style="padding: 20px; background-color: #f9f9f9; border-radius: 10px; margin-top: 20px;">
-    <h2 style="font-family: '辰魚落雁體'; color: #333; text-align: center;">台北市懷愛館（第二殯儀館）</h2>
-    <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: #666; text-align: center;">
-        懷恩專車＆停車資訊
+   <div class="transport-info">
+    <h2 class="title">台北市懷愛館（第二殯儀館）</h2>
+    <p class="subtitle">懷恩專車＆停車資訊</p>
 
-        <!-- 專車示意圖（如果需要，可以添加圖片） -->
-    <div style="text-align: center;">
-        <img src="image/IMG_1823.jpeg" alt="捷運如何到" style="width: 300px; height: auto; border-radius: 10px; loading="lazy">
+    <!-- 圖片展示 -->
+    <div class="image-gallery">
+        <img src="image/IMG_1823.jpeg" alt="捷運如何到" class="gallery-img" aria-label="捷運交通指引">
+        <img src="image/IMG_5052.jpeg" alt="搭車資訊" class="gallery-img" aria-label="搭車資訊">
+        <img src="image/IMG_6803.jpeg" alt="交通指引" class="gallery-img" aria-label="交通指引">
+        <img src="image/IMG_5049.jpeg" alt="搭公車如何到達" class="gallery-img" aria-label="公車交通指引">
+        <img src="image/IMG_6804.jpeg" alt="指引圖" class="gallery-img" aria-label="指引圖">
+        <img src="image/IMG_1826.jpeg" alt="停車資訊" class="gallery-img" aria-label="停車資訊">
     </div>
-
-    <div style="text-align: center;">
-        <img src="image/IMG_5052.jpeg" alt="搭車資訊" style="width: 300px; height: auto; border-radius: 10px; loading="lazy">
-    </div>
-
-    <div style="text-align: center;">
-        <img src="image/IMG_6803.jpeg" alt="交通指引" style="width: 300px; height: auto; border-radius: 10px;" loading="lazy">
-    </div>
-
-    <div style="text-align: center;">
-        <img src="image/IMG_5049.jpeg" alt="搭公車如何到達" style="width: 300px; height: auto; border-radius: 10px; loading="lazy">
-    </div>
-
-    <div style="text-align: center;">
-        <img src="image/IMG_6804.jpeg" alt="指引圖" style="width: 300px; height: auto; border-radius: 10px; loading="lazy">
-    </div>
-         
-    <div style="text-align: center;">
-        <img src="image/IMG_1826.jpeg" alt="停車資訊" style="width: 300px; height: auto; border-radius: 10px; loading="lazy">
-    </div>
-         
 </div>
 
+<style>
+:root {
+    --primary-bg-color: #f9f9f9;
+    --title-color: #333;
+    --subtitle-color: #666;
+    --image-border-radius: 10px;
+    --hover-scale: 1.05;
+    --transition-duration: 0.3s;
+    --box-shadow: rgba(0, 0, 0, 0.1) 0 6px 12px;
+}
+
+/* 整體容器 */
+.transport-info {
+    padding: 20px;
+    background-color: var(--primary-bg-color);
+    border-radius: var(--image-border-radius);
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+/* 標題樣式 */
+.title {
+    font-family: '辰魚落雁體', sans-serif;
+    color: var(--title-color);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* 副標題樣式 */
+.subtitle {
+    font-family: 'Arial', sans-serif;
+    color: var(--subtitle-color);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* 圖片畫廊 */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* 圖片樣式 */
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--image-border-radius);
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+/* 懸停效果 */
+.gallery-img:hover {
+    transform: scale(var(--hover-scale));
+    box-shadow: var(--box-shadow);
+}
+
+/* 響應式設計：圖片調整 */
+@media (max-width: 600px) {
+    .gallery-img {
+        width: 90%;
+    }
+}
+</style>
+                
     <!-- 页脚 -->
     <footer style="text-align: center;">
     <p><strong>承辦禮儀公司 祥安生命有限公司 ｜ 禮儀師：陳柏元</strong></p>
